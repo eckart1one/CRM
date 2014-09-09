@@ -6,7 +6,13 @@ class Home_controller extends CI_Controller {
 	{
 
 		$this->load->helper('url');
-		$this->load->view('head');
+		$data = array(
+		'usuario' => 'Jhon Locke',
+		'vista' => 'listado',
+		'menu' => ''
+		);
+
+		$this->load->view('head',$data);
 	}
 }
 

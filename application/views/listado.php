@@ -1,108 +1,155 @@
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap 101 Template</title>
+    <!-- Data table dependencias -->
+    <!-- DataTables CSS -->
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/css/jquery.dataTables.css">   
+    <!-- DataTables -->
+    <script type="text/javascript" charset="utf8" src="<?php echo base_url();?>assets/js/jquery.dataTables.js"></script>
 
-    <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <style type="text/css">
+            p.test { 
+            white-space:nowrap; 
+            width:12em; 
+            overflow:hidden; 
+            text-overflow: ellipsis; 
+            /*otras hornamentales*/ 
+        } 
+    </style>
+    <script type="text/javascript">
+        $(document).ready( function () {
+            $('#citas_tabla').DataTable();
+            $('#oportunidad_tabla' ).DataTable();
+            $('#lead_tabla').DataTable();
+        }   );
+    </script>
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  </head>
-  <body>
     <div class="container">
     	<div class="row">
-    		<h1>Citas del dia</h1>
-    		<table class="table table-bordered table-striped table-hover table-strech table-condensed table-responsive">
+    		<h2>Citas Proximas</h2>
+    		<table  id="citas_tabla" class="display table  table-striped table-hover table-strech table-condensed table-responsive">
+    			<thead>
+    				<th>Titulo</th>
+    				<th>Fecha</th>
+    				<th>Descripcion</th>
+    				<th>Edicion</th>
+                    <th>Eliminacion</th>
+    			</thead>
     			<tr>
-    				<th>titulo</th>
-    				<th>fecha</th>
-    				<th>descripcion</th>
-    				<th><button type="button" class="btn btn-info">Editar</button></th>
-    				<th><button type="button" class="btn btn-danger">Eliminar</button></th>
-    			</tr>
-    			<tr>
-    				<td>uno</td>
-    				<td>uno</td>
-    				<td>uno</td>
+    				<td>Presentacion St sistems</td>
+    				<td>12-08-15</td>
+    				<td><p class="test">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></td>
     				<th><center><button type="button" class="btn btn-info">Editar</button></center></th>
     				<th><center><button type="button" class="btn btn-danger">Eliminar</button></center></th>
     			</tr>
-    			<tr>
-    				<td>uno</td>
-    				<td>uno</td>
-    				<td>uno</td>
-    				<th><button type="button" class="btn btn-info">Editar</button></th>
-    				<th><button type="button" class="btn btn-danger">Eliminar</button></th>
-    			</tr>
+                    <tr>
+                    <td>Presentacion St sistems</td>
+                    <td>12-08-15</td>
+                    <td><p class="test">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></td>
+                    <th><center><button type="button" class="btn btn-info">Editar</button></center></th>
+                    <th><center><button type="button" class="btn btn-danger">Eliminar</button></center></th>
+                </tr>
+                    <tr>
+                    <td>Presentacion St sistems</td>
+                    <td>12-08-15</td>
+                    <td><p class="test">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></td>
+                    <th><center><button type="button" class="btn btn-info">Editar</button></center></th>
+                    <th><center><button type="button" class="btn btn-danger">Eliminar</button></center></th>
+                </tr>
     		</table>
     	</div>
     	<div class="row">
-    		<h1>Citas del Dia</h1>
-    		<table class="table table-bordered table-striped table-hover table-condensed table-responsive">
+    		<h2>Oportunidades Mas Recientes</h2>
+    		<table id="oportinidad_tabla" class="display table table-striped table-hover table-condensed table-responsive">
+    			<thead>
+    				<th>Titulo</th>
+    				<th>Fecha Cierre</th>
+    				<th>Estado</th>
+    			    <th>Edicion</th>
+                    <th>Eliminacion</th>
+    			</thead>
     			<tr>
-    				<th>titulo</th>
-    				<th>fecha</th>
-    				<th>descripcion</th>
-    				<th><button type="button" class="btn btn-info">Editar</button></th>
-    				<th><button type="button" class="btn btn-danger">Eliminar</button></th>
+    				<td>Servicio Tecnico</td>
+    				<td>15-02-15</td>
+    				<td>Aprobación</td>
+    			    <th><center><button type="button" class="btn btn-info">Editar</button></center></th>
+    				<th><center><button type="button" class="btn btn-danger">Eliminar</button></center></th>
     			</tr>
-    			<tr>
-    				<td>uno</td>
-    				<td>uno</td>
-    				<td>uno</td>
-    			<th><button type="button" class="btn btn-info">Editar</button></th>
-    				<th><button type="button" class="btn btn-danger">Eliminar</button></th>
-    			</tr>
-    			<tr>
-    				<td>uno</td>
-    				<td>uno</td>
-    				<td>uno</td>
-    				<th><button type="button" class="btn btn-info">Editar</button></th>
-    				<th><button type="button" class="btn btn-danger">Eliminar</button></th>
-    			</tr>
+    		    <tr>
+                <td>Servicio Tecnico</td>
+                    <td>15-02-15</td>
+                    <td>Aprobación</td>
+                    <th><center><button type="button" class="btn btn-info">Editar</button></center></th>
+                    <th><center><button type="button" class="btn btn-danger">Eliminar</button></center></th>
+                </tr>
+                <tr>
+                    <td>Servicio Tecnico</td>
+                    <td>15-02-15</td>
+                    <td>Aprobación</td>
+                    <th><center><button type="button" class="btn btn-info">Editar</button></center></th>
+                    <th><center><button type="button" class="btn btn-danger">Eliminar</button></center></th>
+                </tr>
     		</table>
     	</div>
     	<div class="row">
-    		<h1>Citas del Mes</h1>
-    		<table class="table table-bordered table-striped table-hover table-condensed table-responsive">
+    		<h2>Ultimos Leads</h2>
+    		<table id="lead_tabla"class="display table table-striped table-hover table-condensed table-responsive">
+    			<thead>
+    				<th>Nombre</th>
+    				<th>Industria</th>
+    				<th>Contacto</th>
+                    <th>Edicion</th>
+                    <th>Eliminacion</th>
+    				
+    			</thead>
     			<tr>
-    				<th>titulo</th>
-    				<th>fecha</th>
-    				<th>descripcion</th>
-    				<th><button type="button" class="btn btn-info">Editar</button></th>
-    				<th><button type="button" class="btn btn-danger">Eliminar</button></th>
+    				<td>Bodegas Puebla</td>
+    				<td>Comercio Abarrotes</td>
+    				<td><button class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-md">Juan Perez</button></td>
+    				<th><center><button type="button" class="btn btn-info">Editar</button></center></th>
+    				<th><center><button type="button" class="btn btn-danger">Eliminar</button></center></th>
     			</tr>
-    			<tr>
-    				<td>uno</td>
-    				<td>uno</td>
-    				<td>uno</td>
-    				<th><button type="button" class="btn btn-info">Editar</button></th>
-    				<th><button type="button" class="btn btn-danger">Eliminar</button></th>
-    			</tr>
-    			<tr>
-    				<td>uno</td>
-    				<td>uno</td>
-    				<td>uno</td>
-    				<th><button type="button" class="btn btn-info">Editar</button></th>
-    				<th><button type="button" class="btn btn-danger">Eliminar</button></th>
-    			</tr>
+    			 <tr>
+                    <td>Bodegas Puebla</td>
+                    <td>Comercio Abarrotes</td>
+                    <td><button class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-md">Juan Perez</button></td>
+                    <th><center><button type="button" class="btn btn-info">Editar</button></center></th>
+                    <th><center><button type="button" class="btn btn-danger">Eliminar</button></center></th>
+                </tr>
+                <tr>
+                    <td>Bodegas Puebla</td>
+                    <td>Comercio Abarrotes</td>
+                    <td><button class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-md">Juan Perez</button></td>
+                    <th><center><button type="button" class="btn btn-info">Editar</button></center></th>
+                    <th><center><button type="button" class="btn btn-danger">Eliminar</button></center></th>
+                </tr>
     		</table>
     	</div>
+
+        <!-- Large modal -->
+        
     </div>			
     	
+    <div class="modal fade bs-example-modal-md" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <?php $this->load->view("contacto_detalle"); ?>
+    </div>
+    <!-- Data table dependencias -->
+    <!-- DataTables CSS -->
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/css/jquery.dataTables.css">   
+    <!-- DataTables -->
+    <script type="text/javascript" charset="utf8" src="<?php echo base_url();?>assets/js/jquery.dataTables.js"></script>
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
-  </body>
-</html>
+
