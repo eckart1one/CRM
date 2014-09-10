@@ -11,7 +11,8 @@ class Cuentas extends CI_Controller {
 		$data = array(
 			'usuario' => 'Jhon Locke',
 			'vista' => 'cuentas_listado',
-			'menu' => 'lead'
+			'menu' => 'cuentas',
+			'migajas'=>'migajas'
 			);
 		
 		$this->load->view('head',$data);

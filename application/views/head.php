@@ -43,7 +43,7 @@
             <ul class="nav navbar-nav">
               <!-- usar como migas de pan -->
               <li <?php if($menu == 'lead')        echo 'class="active"'?> ><a href="<?= site_url('/lead'); ?>"> Lead </a></li>
-              <li <?php if($menu == 'cuentas')     echo 'class="active"'?> ><a href="<?= site_url('/cuenta'); ?>">Cuentas</a></li>
+              <li <?php if($menu == 'cuentas')     echo 'class="active"'?> ><a href="<?= site_url('/cuentas'); ?>">Cuentas</a></li>
               <li <?php if($menu == 'oportunidad') echo 'class="active"'?> ><a href="<?= site_url('/oportunidad'); ?>">Oportunidades</a></li>
               <li <?php if($menu == 'seguimiento') echo 'class="active"'?> ><a href="<?= site_url('/seguiminto'); ?>">Seguimiento</a></li>
             </ul>
@@ -60,9 +60,10 @@
 
     <div class="container">
       <ol class="breadcrumb">
-        <li><a href="#">Panel Principal</a></li>
+        <li><a href="#"><?php echo $migajas;?></a></li>
         <li><a href="#">Lead</a></li>
         <li class="active">Agregar</li>
+
       </ol>
 
       <!-- en esta parte se debera llama la vista centra que sera mostrada -->

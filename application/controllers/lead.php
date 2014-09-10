@@ -9,8 +9,9 @@ class Lead extends CI_Controller {
 
 		$data = array(
 			'usuario' => 'Jhon Locke',
-			'vista' => 'lead_crear',
-			'menu' => 'lead'
+			'vista' => 'lead_lista',
+			'menu' => 'lead',
+			'migajas'=>'estas son las migajas'
 			);
 		
 		$this->load->view('head',$data);
